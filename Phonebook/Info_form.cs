@@ -7,19 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ubiety.Dns.Core.Records.General;
 
 namespace Phonebook
 {
     public partial class Info_form : Form
     {
-        public Info_form()
+        public Info_form(ListView lstvContacts)
         {
+            if(lstvContacts.SelectedItems.Count == 1)
+            {
+                lbl_Info_Name.Text = "Aaaa";
+            }
+            
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var x = new New_Edit_form();
+            x.ShowDialog();
+        }
 
+        private void btn_Info_Close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace Phonebook
 {
-    public partial class Form1 : Form
+    public partial class New_Edit_form : Form
     {
-        public Form1()
+        public New_Edit_form()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var x = new Info_form();
-            x.ShowDialog();
+
+        }
+
+        private void btn_NewEdit_Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
