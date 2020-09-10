@@ -14,11 +14,9 @@ namespace Phonebook
     {
         List<Contacts> lstContacts;
         Connection con;
-        ListView lstViewVar;
+        
         public Main_form(List<Contacts> lstContacts, Connection con)
         {
-            lstViewVar = lstv_Main_ContactLst;
-
             this.lstContacts = lstContacts;
             this.con = con;
             InitializeComponent();
@@ -32,8 +30,12 @@ namespace Phonebook
         //button Open
         private void button1_Click(object sender, EventArgs e)
         {
-            var x = new Info_form(lstViewVar);
-            x.ShowDialog(lstViewVar);
+            if (lstv_Main_ContactLst.SelectedItems.Count == 1)
+            {
+                var x = new Info_form(lstv_Main_ContactLst);
+                x.ShowDialog(lstv_Main_ContactLst);
+            }
+                
         }
 
         private void btn_Main_New_Click(object sender, EventArgs e)

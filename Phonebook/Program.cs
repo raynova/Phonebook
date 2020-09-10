@@ -14,7 +14,7 @@ namespace Phonebook
         [STAThread]
         static void Main()
         {
-            string query = $@"SELECT name, lastName, phone, address, email FROM contacts";
+            string query = "SELECT name, lastName, phone, address, email FROM contacts";
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

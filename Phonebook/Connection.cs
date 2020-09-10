@@ -74,8 +74,9 @@ namespace Phonebook
 
                 while (reader.Read())
                 {
-                    lstContacts.Add(new Contacts(reader["name"].ToString())
+                    lstContacts.Add(new Contacts(Convert.ToInt32(reader["id"]))
                     {
+                        name = reader["name"].ToString(),
                         lastName = reader["lastName"].ToString(),
                         phone = Convert.ToInt32(reader["phone"]),
                         address = reader["address"].ToString(),

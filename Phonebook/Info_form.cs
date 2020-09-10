@@ -15,12 +15,10 @@ namespace Phonebook
     {
         public Info_form(ListView lstvContacts)
         {
-            if(lstvContacts.SelectedItems.Count == 1)
-            {
-                lbl_Info_Name.Text = "Aaaa";
-            }
-            
             InitializeComponent();
+            Contacts contact = new Contacts();
+
+            lbl_Info_Name.Text = "Aaaa";
         }
 
         private void button1_Click(object sender, EventArgs e)

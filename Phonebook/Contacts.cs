@@ -8,15 +8,16 @@ namespace Phonebook
 {
     public class Contacts
     {
+        public int id;
         public string name;
         public string lastName;
         public int phone;
         public string address;
         public string email;
 
-        public Contacts(string name)
+        public Contacts(int id)
         {
-            this.name = name;
+            this.id = id;
             /*this.lastName = lastName;
             this.phone = phone;
             this.address = address;

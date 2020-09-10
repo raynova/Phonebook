@@ -10,4 +10,8 @@ CREATE TABLE contacts(
 INSERT INTO contacts(name, lastName, phone)
 VALUES ('Target', 'Dummy', 123);
 
-DROP TABLE contacts
+UPDATE contacts
+SET email ='test@abc.com' 
+WHERE id = 1
+
+DROP TABLE contacts;
