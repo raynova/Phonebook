@@ -14,18 +14,18 @@ namespace Phonebook
         [STAThread]
         static void Main()
         {
-            string query = "SELECT name, lastName, phone, address, email FROM contacts";
+            string query = "SELECT id, name, lastName, phone, address, email FROM contacts";
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
+
 
             List<Contacts> lstContacts = new List<Contacts>();
             Connection con = new Connection();
             con.Select(lstContacts, query);
 
             Application.Run(new Main_form(lstContacts, con));
-            
+
         }
     }
 }

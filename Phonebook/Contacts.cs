@@ -15,9 +15,9 @@ namespace Phonebook
         public string address;
         public string email;
 
-        public Contacts(int id)
+        public Contacts()
         {
-            this.id = id;
+            //this.id = id;
             /*this.lastName = lastName;
             this.phone = phone;
             this.address = address;

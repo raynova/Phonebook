@@ -32,8 +32,13 @@ namespace Phonebook
         {
             if (lstv_Main_ContactLst.SelectedItems.Count == 1)
             {
-                var x = new Info_form(lstv_Main_ContactLst);
-                x.ShowDialog(lstv_Main_ContactLst);
+                int index = 0;
+                foreach(ListViewItem item in lstv_Main_ContactLst.SelectedItems)
+                {
+                    index = item.Index;
+                }
+                var x = new Info_form(lstContacts, index);
+                x.ShowDialog();
             }
                 
         }

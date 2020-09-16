@@ -35,6 +35,14 @@ namespace Phonebook
             connection = new MySqlConnection(connectionString);
         }
 
+        public void Add_New_Contact()
+        {
+            if(this.Open() == true)
+            {
+
+            }
+        }
+
         /*public void Update(string query, List<Pets> petLst)
         {
 
@@ -74,8 +82,9 @@ namespace Phonebook
 
                 while (reader.Read())
                 {
-                    lstContacts.Add(new Contacts(Convert.ToInt32(reader["id"]))
+                    lstContacts.Add(new Contacts()
                     {
+                        id = Convert.ToInt32(reader["id"]),
                         name = reader["name"].ToString(),
                         lastName = reader["lastName"].ToString(),
                         phone = Convert.ToInt32(reader["phone"]),

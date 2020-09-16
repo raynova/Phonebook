@@ -96,6 +96,7 @@
             this.Controls.Add(this.btn_Main_New);
             this.Controls.Add(this.btn_Main_Open);
             this.Name = "Main_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phonebook";
             this.ResumeLayout(false);
 
