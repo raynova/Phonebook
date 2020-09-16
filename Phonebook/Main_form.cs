@@ -37,7 +37,7 @@ namespace Phonebook
                 {
                     index = item.Index;
                 }
-                var x = new Info_form(lstContacts, index);
+                var x = new Info_form(lstContacts, index, con);
                 x.ShowDialog();
             }
                 
@@ -45,7 +45,7 @@ namespace Phonebook
 
         private void btn_Main_New_Click(object sender, EventArgs e)
         {
-            var x = new New_Edit_form();
+            var x = new New_Edit_form(con, lstContacts);
             x.ShowDialog();
         }
 
@@ -63,7 +63,16 @@ namespace Phonebook
 
         private void btn_Main_Delete_Click(object sender, EventArgs e)
         {
-
+            if (lstv_Main_ContactLst.SelectedItems.Count == 1)
+            {
+                int index = 0;
+                foreach (ListViewItem item in lstv_Main_ContactLst.SelectedItems)
+                {
+                    index = item.Index;
+                }
+                string query = $@"DELETE FROM students WHERE id = {lstContacts[index].id}";
+                con.Update_DeleteContact(query);
+            }
         }
     }
 }

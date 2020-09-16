@@ -45,7 +45,7 @@
             // lbl_Info_Nm
             // 
             this.lbl_Info_Nm.AutoSize = true;
-            this.lbl_Info_Nm.Location = new System.Drawing.Point(75, 85);
+            this.lbl_Info_Nm.Location = new System.Drawing.Point(29, 61);
             this.lbl_Info_Nm.Name = "lbl_Info_Nm";
             this.lbl_Info_Nm.Size = new System.Drawing.Size(35, 13);
             this.lbl_Info_Nm.TabIndex = 0;
@@ -54,7 +54,7 @@
             // lbl_Info_LNm
             // 
             this.lbl_Info_LNm.AutoSize = true;
-            this.lbl_Info_LNm.Location = new System.Drawing.Point(75, 127);
+            this.lbl_Info_LNm.Location = new System.Drawing.Point(29, 103);
             this.lbl_Info_LNm.Name = "lbl_Info_LNm";
             this.lbl_Info_LNm.Size = new System.Drawing.Size(56, 13);
             this.lbl_Info_LNm.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lbl_Info_Phn
             // 
             this.lbl_Info_Phn.AutoSize = true;
-            this.lbl_Info_Phn.Location = new System.Drawing.Point(75, 172);
+            this.lbl_Info_Phn.Location = new System.Drawing.Point(29, 148);
             this.lbl_Info_Phn.Name = "lbl_Info_Phn";
             this.lbl_Info_Phn.Size = new System.Drawing.Size(38, 13);
             this.lbl_Info_Phn.TabIndex = 2;
@@ -72,7 +72,7 @@
             // lbl_Info_Addr
             // 
             this.lbl_Info_Addr.AutoSize = true;
-            this.lbl_Info_Addr.Location = new System.Drawing.Point(75, 211);
+            this.lbl_Info_Addr.Location = new System.Drawing.Point(29, 187);
             this.lbl_Info_Addr.Name = "lbl_Info_Addr";
             this.lbl_Info_Addr.Size = new System.Drawing.Size(45, 13);
             this.lbl_Info_Addr.TabIndex = 3;
@@ -81,7 +81,7 @@
             // lbl_Info_eml
             // 
             this.lbl_Info_eml.AutoSize = true;
-            this.lbl_Info_eml.Location = new System.Drawing.Point(75, 274);
+            this.lbl_Info_eml.Location = new System.Drawing.Point(29, 250);
             this.lbl_Info_eml.Name = "lbl_Info_eml";
             this.lbl_Info_eml.Size = new System.Drawing.Size(31, 13);
             this.lbl_Info_eml.TabIndex = 4;
@@ -90,7 +90,7 @@
             // lbl_Info_email
             // 
             this.lbl_Info_email.AutoSize = true;
-            this.lbl_Info_email.Location = new System.Drawing.Point(171, 274);
+            this.lbl_Info_email.Location = new System.Drawing.Point(125, 250);
             this.lbl_Info_email.Name = "lbl_Info_email";
             this.lbl_Info_email.Size = new System.Drawing.Size(35, 13);
             this.lbl_Info_email.TabIndex = 9;
@@ -99,7 +99,7 @@
             // lbl_Info_Address
             // 
             this.lbl_Info_Address.AutoSize = true;
-            this.lbl_Info_Address.Location = new System.Drawing.Point(171, 211);
+            this.lbl_Info_Address.Location = new System.Drawing.Point(125, 187);
             this.lbl_Info_Address.Name = "lbl_Info_Address";
             this.lbl_Info_Address.Size = new System.Drawing.Size(35, 13);
             this.lbl_Info_Address.TabIndex = 8;
@@ -108,7 +108,7 @@
             // lbl_Info_Phone
             // 
             this.lbl_Info_Phone.AutoSize = true;
-            this.lbl_Info_Phone.Location = new System.Drawing.Point(171, 172);
+            this.lbl_Info_Phone.Location = new System.Drawing.Point(125, 148);
             this.lbl_Info_Phone.Name = "lbl_Info_Phone";
             this.lbl_Info_Phone.Size = new System.Drawing.Size(35, 13);
             this.lbl_Info_Phone.TabIndex = 7;
@@ -117,7 +117,7 @@
             // lbl_Info_LastName
             // 
             this.lbl_Info_LastName.AutoSize = true;
-            this.lbl_Info_LastName.Location = new System.Drawing.Point(171, 127);
+            this.lbl_Info_LastName.Location = new System.Drawing.Point(125, 103);
             this.lbl_Info_LastName.Name = "lbl_Info_LastName";
             this.lbl_Info_LastName.Size = new System.Drawing.Size(35, 13);
             this.lbl_Info_LastName.TabIndex = 6;
@@ -126,7 +126,7 @@
             // lbl_Info_Name
             // 
             this.lbl_Info_Name.AutoSize = true;
-            this.lbl_Info_Name.Location = new System.Drawing.Point(171, 85);
+            this.lbl_Info_Name.Location = new System.Drawing.Point(125, 61);
             this.lbl_Info_Name.Name = "lbl_Info_Name";
             this.lbl_Info_Name.Size = new System.Drawing.Size(41, 13);
             this.lbl_Info_Name.TabIndex = 5;
@@ -134,7 +134,7 @@
             // 
             // btn_Info_Edit
             // 
-            this.btn_Info_Edit.Location = new System.Drawing.Point(63, 373);
+            this.btn_Info_Edit.Location = new System.Drawing.Point(32, 391);
             this.btn_Info_Edit.Name = "btn_Info_Edit";
             this.btn_Info_Edit.Size = new System.Drawing.Size(75, 28);
             this.btn_Info_Edit.TabIndex = 10;
@@ -144,7 +144,7 @@
             // 
             // btn_Info_Close2
             // 
-            this.btn_Info_Close2.Location = new System.Drawing.Point(258, 373);
+            this.btn_Info_Close2.Location = new System.Drawing.Point(183, 391);
             this.btn_Info_Close2.Name = "btn_Info_Close2";
             this.btn_Info_Close2.Size = new System.Drawing.Size(75, 28);
             this.btn_Info_Close2.TabIndex = 11;
@@ -152,11 +152,11 @@
             this.btn_Info_Close2.UseVisualStyleBackColor = true;
             this.btn_Info_Close2.Click += new System.EventHandler(this.btn_Info_Close2_Click);
             // 
-            // Info_form_2
+            // Info_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 450);
+            this.ClientSize = new System.Drawing.Size(314, 461);
             this.Controls.Add(this.btn_Info_Close2);
             this.Controls.Add(this.btn_Info_Edit);
             this.Controls.Add(this.lbl_Info_email);
@@ -169,7 +169,7 @@
             this.Controls.Add(this.lbl_Info_Phn);
             this.Controls.Add(this.lbl_Info_LNm);
             this.Controls.Add(this.lbl_Info_Nm);
-            this.Name = "Info_form_2";
+            this.Name = "Info_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Info_form_2";
             this.ResumeLayout(false);

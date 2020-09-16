@@ -35,34 +35,12 @@ namespace Phonebook
             connection = new MySqlConnection(connectionString);
         }
 
-        public void Add_New_Contact()
+        public void Update_DeleteContact(string query)
         {
-            if(this.Open() == true)
-            {
-
-            }
-        }
-
-        /*public void Update(string query, List<Pets> petLst)
-        {
-
             if (this.Open() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    petLst.Add(new Pets(reader["petName"].ToString(), reader["animalType"].ToString())
-                    {
-                        ownerName = reader["clientName"].ToString(),
-                        ownerLastName = reader["clientLastName"].ToString(),
-                        sellerName = reader["sellerName"].ToString(),
-                        sellerLastName = reader["sellerLastName"].ToString()
-                    });
-                }
 
                 this.Close();
             }
@@ -70,7 +48,7 @@ namespace Phonebook
             {
                 Environment.Exit(0);
             }
-        }*/
+        }
 
         public void Select(List<Contacts> lstContacts, string query)
         {
@@ -103,12 +81,26 @@ namespace Phonebook
             }
         }
 
-        public long Insert(string query)
+        public long InsertNewContact(string query, List<Contacts> lstContacts)
         {
             if (this.Open() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    lstContacts.Add(new Contacts()
+                    {
+                        id = Convert.ToInt32(reader["id"]),
+                        name = reader["name"].ToString(),
+                        lastName = reader["lastName"].ToString(),
+                        phone = Convert.ToInt32(reader["phone"]),
+                        address = reader["address"].ToString(),
+                        email = reader["email"].ToString(),
+                    });
+                }
 
                 this.Close();
 

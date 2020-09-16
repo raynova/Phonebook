@@ -12,9 +12,11 @@ namespace Phonebook
 {
     public partial class Info_form : Form
     {
+        Connection con;
         Contacts contact = new Contacts();
-        public Info_form(List<Contacts> lstContacts, int index)
+        public Info_form(List<Contacts> lstContacts, int index, Connection con)
         {
+            this.con = con;
             contact = lstContacts[index];
 
             string formText;
@@ -32,8 +34,8 @@ namespace Phonebook
             }
             else { formText = "Info"; }
 
-            this.Text = formText;
             InitializeComponent();
+            this.Text = formText;
 
             lbl_Info_Name.Text = contact.name;
             lbl_Info_LastName.Text = contact.lastName;
@@ -44,7 +46,7 @@ namespace Phonebook
 
         private void btn_Info_Edit_Click(object sender, EventArgs e)
         {
-            var x = new New_Edit_form(contact);
+            var x = new New_Edit_form(contact, con);
             x.ShowDialog();
         }
 
