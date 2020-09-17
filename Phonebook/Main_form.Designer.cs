@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
             this.btn_Main_New = new System.Windows.Forms.Button();
             this.lstv_Main_ContactLst = new System.Windows.Forms.ListView();
             this.btn_Main_Delete = new System.Windows.Forms.Button();
@@ -89,19 +90,22 @@
             this.comboBox_Main_Search.TabIndex = 4;
             this.comboBox_Main_Search.Text = "Search...";
             this.comboBox_Main_Search.SelectedIndexChanged += new System.EventHandler(this.comboBox_Main_Search_SelectedIndexChanged);
-            this.comboBox_Main_Search.TextChanged += new System.EventHandler(this.comboBox_Main_Search_TextChanged);
             // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(314, 461);
             this.Controls.Add(this.comboBox_Main_Search);
             this.Controls.Add(this.btn_Main_Delete);
             this.Controls.Add(this.lstv_Main_ContactLst);
             this.Controls.Add(this.btn_Main_New);
+            this.DoubleBuffered = true;
             this.Name = "Main_form";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phonebook";
             this.ResumeLayout(false);

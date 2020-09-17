@@ -17,9 +17,11 @@ namespace Phonebook
         List<Contacts> lstContacts;
         Contacts contact;
         ListView lstv_Main_ContactLst;
+        ComboBox comboBox_Main_Search;
 
-        public New_Edit_form(List<Contacts> lstContacts, Contacts contact, Connection con, ListView lstv_Main_ContactLst)
+        public New_Edit_form(List<Contacts> lstContacts, Contacts contact, Connection con, ListView lstv_Main_ContactLst, ComboBox comboBox_Main_Search)
         {
+            this.comboBox_Main_Search = comboBox_Main_Search;
             this.lstContacts = lstContacts;
             this.lstv_Main_ContactLst = lstv_Main_ContactLst;
             this.con = con;
@@ -55,8 +57,9 @@ namespace Phonebook
             }
         }
 
-        public New_Edit_form(Connection con, List<Contacts> lstContacts, ListView lstv_Main_ContactLst)
+        public New_Edit_form(Connection con, List<Contacts> lstContacts, ListView lstv_Main_ContactLst, ComboBox comboBox_Main_Search)
         {
+            this.comboBox_Main_Search = comboBox_Main_Search;
             this.lstv_Main_ContactLst = lstv_Main_ContactLst;
             this.lstContacts = lstContacts;
             this.con = con;
@@ -111,12 +114,14 @@ WHERE id = {contact.id}";
 
             lstv_Main_ContactLst.Clear();
             lstContacts.Clear();
+            comboBox_Main_Search.Items.Clear();
 
             string queryUpdate = "SELECT id, name, lastName, phone, address, email FROM contacts";
             con.Select(lstContacts, queryUpdate);
             foreach (Contacts contact in lstContacts)
             {
                 lstv_Main_ContactLst.Items.Add(contact.name + " " + contact.lastName);
+                comboBox_Main_Search.Items.Add(contact.name + " " + contact.lastName);
             }
             
 
@@ -126,11 +131,6 @@ WHERE id = {contact.id}";
         private void btn_NewEdit_Cancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        public ListView ReturnListView(ListView lstv_Main_ContactLst)
-        {
-            return lstv_Main_ContactLst;
         }
     }
 }

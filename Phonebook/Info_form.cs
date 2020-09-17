@@ -16,8 +16,10 @@ namespace Phonebook
         Contacts contact = new Contacts();
         ListView lstv_Main_ContactLst;
         List<Contacts> lstContacts;
-        public Info_form(List<Contacts> lstContacts, int index, Connection con, ListView lstv_Main_ContactLst)
+        ComboBox comboBox_Main_Search;
+        public Info_form(List<Contacts> lstContacts, int index, Connection con, ListView lstv_Main_ContactLst, ComboBox comboBox_Main_Search)
         {
+            this.comboBox_Main_Search = comboBox_Main_Search;
             this.lstContacts = lstContacts;
             this.lstv_Main_ContactLst = lstv_Main_ContactLst;
             this.con = con;
@@ -50,7 +52,7 @@ namespace Phonebook
 
         private void btn_Info_Edit_Click(object sender, EventArgs e)
         {
-            var x = new New_Edit_form(lstContacts, contact, con, lstv_Main_ContactLst);
+            var x = new New_Edit_form(lstContacts, contact, con, lstv_Main_ContactLst, comboBox_Main_Search);
             x.ShowDialog();
             Close();
         }

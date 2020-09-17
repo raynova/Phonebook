@@ -34,7 +34,7 @@ namespace Phonebook
 
         private void btn_Main_New_Click(object sender, EventArgs e)
         {
-            var x = new New_Edit_form(con, lstContacts, lstv_Main_ContactLst);
+            var x = new New_Edit_form(con, lstContacts, lstv_Main_ContactLst, comboBox_Main_Search);
             x.ShowDialog();
         }
 
@@ -63,6 +63,7 @@ namespace Phonebook
                 con.Update_Delete_New_Contact(query);
                 lstContacts.RemoveAt(index);
                 lstv_Main_ContactLst.Items.RemoveAt(index);
+                comboBox_Main_Search.Items.RemoveAt(index);
             }
         }
 
@@ -75,27 +76,16 @@ namespace Phonebook
                 {
                     index = item.Index;
                 }
-                var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
+                var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst, comboBox_Main_Search);
                 x.ShowDialog();
             }
         }
 
         private void comboBox_Main_Search_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = 0;
-            string text = comboBox_Main_Search.SelectedItem.ToString();
-            string[] a = text.Split(' ');
-            string name = a[0];
-            string lastName = a[1];
-            for(int i = 0; i < lstContacts.Count; i++)
-            {
-                if(lstContacts[i].name == name)
-                {
-                    index = i;
-                }
-            }
+            int index = comboBox_Main_Search.SelectedIndex;
 
-            var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
+            var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst, comboBox_Main_Search);
             x.ShowDialog();
         }
     }
