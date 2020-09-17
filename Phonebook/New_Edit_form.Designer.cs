@@ -191,6 +191,7 @@
             this.Controls.Add(this.btn_NewEdit_Cancel);
             this.Controls.Add(this.btn_NewEdit_Save);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "New_Edit_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New contact";

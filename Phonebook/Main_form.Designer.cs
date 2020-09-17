@@ -104,6 +104,7 @@
             this.Controls.Add(this.lstv_Main_ContactLst);
             this.Controls.Add(this.btn_Main_New);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

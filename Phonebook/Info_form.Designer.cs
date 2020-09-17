@@ -92,17 +92,17 @@
             this.lbl_Info_eml.AutoSize = true;
             this.lbl_Info_eml.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Info_eml.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_Info_eml.Location = new System.Drawing.Point(31, 259);
+            this.lbl_Info_eml.Location = new System.Drawing.Point(31, 287);
             this.lbl_Info_eml.Name = "lbl_Info_eml";
-            this.lbl_Info_eml.Size = new System.Drawing.Size(41, 16);
+            this.lbl_Info_eml.Size = new System.Drawing.Size(45, 16);
             this.lbl_Info_eml.TabIndex = 4;
-            this.lbl_Info_eml.Text = "email";
+            this.lbl_Info_eml.Text = "e-mail";
             // 
             // lbl_Info_email
             // 
             this.lbl_Info_email.AutoSize = true;
             this.lbl_Info_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Info_email.Location = new System.Drawing.Point(127, 259);
+            this.lbl_Info_email.Location = new System.Drawing.Point(127, 287);
             this.lbl_Info_email.Name = "lbl_Info_email";
             this.lbl_Info_email.Size = new System.Drawing.Size(45, 16);
             this.lbl_Info_email.TabIndex = 9;
@@ -197,6 +197,7 @@
             this.Controls.Add(this.lbl_Info_LNm);
             this.Controls.Add(this.lbl_Info_Nm);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Info_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Info_form_2";
