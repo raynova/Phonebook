@@ -49,6 +49,7 @@
             this.btn_NewEdit_Save.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_NewEdit_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_NewEdit_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NewEdit_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_NewEdit_Save.Location = new System.Drawing.Point(34, 393);
             this.btn_NewEdit_Save.Name = "btn_NewEdit_Save";
             this.btn_NewEdit_Save.Size = new System.Drawing.Size(75, 30);
@@ -62,6 +63,7 @@
             this.btn_NewEdit_Cancel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_NewEdit_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_NewEdit_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NewEdit_Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_NewEdit_Cancel.Location = new System.Drawing.Point(202, 393);
             this.btn_NewEdit_Cancel.Name = "btn_NewEdit_Cancel";
             this.btn_NewEdit_Cancel.Size = new System.Drawing.Size(75, 30);

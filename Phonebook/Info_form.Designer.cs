@@ -152,6 +152,7 @@
             this.btn_Info_Edit.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Info_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Info_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Info_Edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Info_Edit.Location = new System.Drawing.Point(36, 396);
             this.btn_Info_Edit.Name = "btn_Info_Edit";
             this.btn_Info_Edit.Size = new System.Drawing.Size(75, 28);
@@ -165,6 +166,7 @@
             this.btn_Info_Close2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Info_Close2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Info_Close2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Info_Close2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Info_Close2.Location = new System.Drawing.Point(187, 396);
             this.btn_Info_Close2.Name = "btn_Info_Close2";
             this.btn_Info_Close2.Size = new System.Drawing.Size(75, 28);

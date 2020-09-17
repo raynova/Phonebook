@@ -40,6 +40,7 @@
             this.btn_Main_Open.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Main_Open.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Main_Open.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Main_Open.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Main_Open.Location = new System.Drawing.Point(37, 401);
             this.btn_Main_Open.Name = "btn_Main_Open";
             this.btn_Main_Open.Size = new System.Drawing.Size(75, 28);
@@ -52,6 +53,7 @@
             this.btn_Main_New.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Main_New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Main_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Main_New.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Main_New.Location = new System.Drawing.Point(118, 401);
             this.btn_Main_New.Name = "btn_Main_New";
             this.btn_Main_New.Size = new System.Drawing.Size(75, 28);
@@ -81,6 +83,7 @@
             this.btn_Main_Delete.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_Main_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Main_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Main_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Main_Delete.Location = new System.Drawing.Point(199, 401);
             this.btn_Main_Delete.Name = "btn_Main_Delete";
             this.btn_Main_Delete.Size = new System.Drawing.Size(75, 28);
