@@ -37,50 +37,66 @@
             // 
             // btn_Main_Open
             // 
+            this.btn_Main_Open.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_Main_Open.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Main_Open.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Main_Open.Location = new System.Drawing.Point(37, 401);
             this.btn_Main_Open.Name = "btn_Main_Open";
             this.btn_Main_Open.Size = new System.Drawing.Size(75, 28);
             this.btn_Main_Open.TabIndex = 0;
             this.btn_Main_Open.Text = "Open";
-            this.btn_Main_Open.UseVisualStyleBackColor = true;
-            this.btn_Main_Open.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Main_Open.UseVisualStyleBackColor = false;
             // 
             // btn_Main_New
             // 
+            this.btn_Main_New.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_Main_New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Main_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Main_New.Location = new System.Drawing.Point(118, 401);
             this.btn_Main_New.Name = "btn_Main_New";
             this.btn_Main_New.Size = new System.Drawing.Size(75, 28);
             this.btn_Main_New.TabIndex = 1;
             this.btn_Main_New.Text = "New";
-            this.btn_Main_New.UseVisualStyleBackColor = true;
+            this.btn_Main_New.UseVisualStyleBackColor = false;
             this.btn_Main_New.Click += new System.EventHandler(this.btn_Main_New_Click);
             // 
             // lstv_Main_ContactLst
             // 
+            this.lstv_Main_ContactLst.BackColor = System.Drawing.Color.AliceBlue;
+            this.lstv_Main_ContactLst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstv_Main_ContactLst.FullRowSelect = true;
             this.lstv_Main_ContactLst.HideSelection = false;
             this.lstv_Main_ContactLst.Location = new System.Drawing.Point(37, 102);
+            this.lstv_Main_ContactLst.MultiSelect = false;
             this.lstv_Main_ContactLst.Name = "lstv_Main_ContactLst";
             this.lstv_Main_ContactLst.Size = new System.Drawing.Size(237, 272);
             this.lstv_Main_ContactLst.TabIndex = 2;
+            this.lstv_Main_ContactLst.TileSize = new System.Drawing.Size(230, 30);
             this.lstv_Main_ContactLst.UseCompatibleStateImageBehavior = false;
             this.lstv_Main_ContactLst.View = System.Windows.Forms.View.Tile;
+            this.lstv_Main_ContactLst.DoubleClick += new System.EventHandler(this.lstv_Main_ContactLst_DoubleClick);
             // 
             // btn_Main_Delete
             // 
+            this.btn_Main_Delete.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_Main_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Main_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Main_Delete.Location = new System.Drawing.Point(199, 401);
             this.btn_Main_Delete.Name = "btn_Main_Delete";
             this.btn_Main_Delete.Size = new System.Drawing.Size(75, 28);
             this.btn_Main_Delete.TabIndex = 3;
             this.btn_Main_Delete.Text = "Delete";
-            this.btn_Main_Delete.UseVisualStyleBackColor = true;
+            this.btn_Main_Delete.UseVisualStyleBackColor = false;
             this.btn_Main_Delete.Click += new System.EventHandler(this.btn_Main_Delete_Click);
             // 
             // comboBox_Main_Search
             // 
+            this.comboBox_Main_Search.BackColor = System.Drawing.Color.AliceBlue;
+            this.comboBox_Main_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Main_Search.FormattingEnabled = true;
             this.comboBox_Main_Search.Location = new System.Drawing.Point(37, 27);
             this.comboBox_Main_Search.Name = "comboBox_Main_Search";
-            this.comboBox_Main_Search.Size = new System.Drawing.Size(237, 21);
+            this.comboBox_Main_Search.Size = new System.Drawing.Size(237, 24);
             this.comboBox_Main_Search.TabIndex = 4;
             this.comboBox_Main_Search.Text = "Search...";
             this.comboBox_Main_Search.TextChanged += new System.EventHandler(this.comboBox_Main_Search_TextChanged);
@@ -89,6 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(314, 461);
             this.Controls.Add(this.comboBox_Main_Search);
             this.Controls.Add(this.btn_Main_Delete);

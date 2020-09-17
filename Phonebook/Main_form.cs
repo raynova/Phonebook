@@ -23,14 +23,19 @@ namespace Phonebook
 
             foreach (Contacts contact in lstContacts)
             {
+                string contStr = contact.name + " " + contact.lastName;
                 lstv_Main_ContactLst.Items.Add(contact.name + " " + contact.lastName);
+                comboBox_Main_Search.Items.Add(contStr);
             }
+
+            comboBox_Main_Search.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBox_Main_Search.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         //button Open
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
-            if (lstv_Main_ContactLst.SelectedItems.Count == 1)
+            if (comboBox_Main_Search.SelectedItem.
             {
                 int index = 0;
                 foreach(ListViewItem item in lstv_Main_ContactLst.SelectedItems)
@@ -40,8 +45,7 @@ namespace Phonebook
                 var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
                 x.ShowDialog();
             }
-                
-        }
+        }*/
 
         private void btn_Main_New_Click(object sender, EventArgs e)
         {
@@ -53,7 +57,7 @@ namespace Phonebook
         {
             if (comboBox_Main_Search.SelectedIndex < 0)
             {
-                comboBox_Main_Search.Text = "Search...";
+                
             }
             else
             {
@@ -74,6 +78,20 @@ namespace Phonebook
                 con.Update_Delete_New_Contact(query);
                 lstContacts.RemoveAt(index);
                 lstv_Main_ContactLst.Items.RemoveAt(index);
+            }
+        }
+
+        private void lstv_Main_ContactLst_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstv_Main_ContactLst.SelectedItems.Count == 1)
+            {
+                int index = 0;
+                foreach (ListViewItem item in lstv_Main_ContactLst.SelectedItems)
+                {
+                    index = item.Index;
+                }
+                var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
+                x.ShowDialog();
             }
         }
     }
