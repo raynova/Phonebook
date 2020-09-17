@@ -35,7 +35,7 @@ namespace Phonebook
             connection = new MySqlConnection(connectionString);
         }
 
-        public void Update_DeleteContact(string query)
+        public void Update_Delete_New_Contact(string query)
         {
             if (this.Open() == true)
             {
@@ -55,7 +55,6 @@ namespace Phonebook
             if (this.Open() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -78,38 +77,6 @@ namespace Phonebook
             else
             {
                 Environment.Exit(0);
-            }
-        }
-
-        public long InsertNewContact(string query, List<Contacts> lstContacts)
-        {
-            if (this.Open() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.ExecuteNonQuery();
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    lstContacts.Add(new Contacts()
-                    {
-                        id = Convert.ToInt32(reader["id"]),
-                        name = reader["name"].ToString(),
-                        lastName = reader["lastName"].ToString(),
-                        phone = Convert.ToInt32(reader["phone"]),
-                        address = reader["address"].ToString(),
-                        email = reader["email"].ToString(),
-                    });
-                }
-
-                this.Close();
-
-                return cmd.LastInsertedId;
-            }
-            else
-            {
-                Environment.Exit(0);
-                return 0;
             }
         }
 

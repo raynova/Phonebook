@@ -16,8 +16,12 @@ namespace Phonebook
         bool editCont = false;
         List<Contacts> lstContacts;
         Contacts contact;
-        public New_Edit_form(Contacts contact, Connection con)
+        ListView lstv_Main_ContactLst;
+
+        public New_Edit_form(List<Contacts> lstContacts, Contacts contact, Connection con, ListView lstv_Main_ContactLst)
         {
+            this.lstContacts = lstContacts;
+            this.lstv_Main_ContactLst = lstv_Main_ContactLst;
             this.con = con;
             this.contact = contact;
 
@@ -51,8 +55,9 @@ namespace Phonebook
             }
         }
 
-        public New_Edit_form(Connection con, List<Contacts> lstContacts)
+        public New_Edit_form(Connection con, List<Contacts> lstContacts, ListView lstv_Main_ContactLst)
         {
+            this.lstv_Main_ContactLst = lstv_Main_ContactLst;
             this.lstContacts = lstContacts;
             this.con = con;
             InitializeComponent();
@@ -74,7 +79,7 @@ namespace Phonebook
             {
                 lastName = txt_NewEdit_LastName.Text;
             }
-            if (phone != 0)
+            if (txt_NewEdit_Phone != null)
             {
                 phone = Convert.ToInt32(txt_NewEdit_Phone.Text);
             }
@@ -93,7 +98,7 @@ namespace Phonebook
                 string query = $@"INSERT INTO contacts (name, lastName, phone, address, email) 
 VALUES ('{name}', '{lastName}', {phone}, '{address}', '{email}')"
                     ;
-                con.InsertNewContact(query, lstContacts);
+                con.Update_Delete_New_Contact(query);
             }
 
             if(editCont == true)
@@ -101,13 +106,31 @@ VALUES ('{name}', '{lastName}', {phone}, '{address}', '{email}')"
                 string query = $@"UPDATE contacts 
 SET name = '{name}', lastName = '{lastName}', phone = {phone}, address = '{address}', email = '{email}' 
 WHERE id = {contact.id}";
-                con.Update_DeleteContact(query);
+                con.Update_Delete_New_Contact(query);
             }
+
+            lstv_Main_ContactLst.Clear();
+            lstContacts.Clear();
+
+            string queryUpdate = "SELECT id, name, lastName, phone, address, email FROM contacts";
+            con.Select(lstContacts, queryUpdate);
+            foreach (Contacts contact in lstContacts)
+            {
+                lstv_Main_ContactLst.Items.Add(contact.name + " " + contact.lastName);
+            }
+            
+
+            Close();
         }
 
         private void btn_NewEdit_Cancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public ListView ReturnListView(ListView lstv_Main_ContactLst)
+        {
+            return lstv_Main_ContactLst;
         }
     }
 }

@@ -14,8 +14,12 @@ namespace Phonebook
     {
         Connection con;
         Contacts contact = new Contacts();
-        public Info_form(List<Contacts> lstContacts, int index, Connection con)
+        ListView lstv_Main_ContactLst;
+        List<Contacts> lstContacts;
+        public Info_form(List<Contacts> lstContacts, int index, Connection con, ListView lstv_Main_ContactLst)
         {
+            this.lstContacts = lstContacts;
+            this.lstv_Main_ContactLst = lstv_Main_ContactLst;
             this.con = con;
             contact = lstContacts[index];
 
@@ -46,8 +50,9 @@ namespace Phonebook
 
         private void btn_Info_Edit_Click(object sender, EventArgs e)
         {
-            var x = new New_Edit_form(contact, con);
+            var x = new New_Edit_form(lstContacts, contact, con, lstv_Main_ContactLst);
             x.ShowDialog();
+            Close();
         }
 
         private void btn_Info_Close2_Click(object sender, EventArgs e)

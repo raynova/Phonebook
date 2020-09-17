@@ -15,3 +15,8 @@ SET email ='test@abc.com'
 WHERE id = 1
 
 DROP TABLE contacts;
+
+SELECT id, name, lastName
+FROM contacts;
+
+DELETE FROM contacts WHERE id = 4 OR id = 5
