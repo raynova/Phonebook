@@ -28,25 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Main_Open = new System.Windows.Forms.Button();
             this.btn_Main_New = new System.Windows.Forms.Button();
             this.lstv_Main_ContactLst = new System.Windows.Forms.ListView();
             this.btn_Main_Delete = new System.Windows.Forms.Button();
             this.comboBox_Main_Search = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // btn_Main_Open
-            // 
-            this.btn_Main_Open.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btn_Main_Open.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Main_Open.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Main_Open.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btn_Main_Open.Location = new System.Drawing.Point(37, 401);
-            this.btn_Main_Open.Name = "btn_Main_Open";
-            this.btn_Main_Open.Size = new System.Drawing.Size(75, 28);
-            this.btn_Main_Open.TabIndex = 0;
-            this.btn_Main_Open.Text = "Open";
-            this.btn_Main_Open.UseVisualStyleBackColor = false;
             // 
             // btn_Main_New
             // 
@@ -54,7 +40,7 @@
             this.btn_Main_New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Main_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Main_New.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.btn_Main_New.Location = new System.Drawing.Point(118, 401);
+            this.btn_Main_New.Location = new System.Drawing.Point(37, 401);
             this.btn_Main_New.Name = "btn_Main_New";
             this.btn_Main_New.Size = new System.Drawing.Size(75, 28);
             this.btn_Main_New.TabIndex = 1;
@@ -102,6 +88,7 @@
             this.comboBox_Main_Search.Size = new System.Drawing.Size(237, 24);
             this.comboBox_Main_Search.TabIndex = 4;
             this.comboBox_Main_Search.Text = "Search...";
+            this.comboBox_Main_Search.SelectedIndexChanged += new System.EventHandler(this.comboBox_Main_Search_SelectedIndexChanged);
             this.comboBox_Main_Search.TextChanged += new System.EventHandler(this.comboBox_Main_Search_TextChanged);
             // 
             // Main_form
@@ -114,7 +101,6 @@
             this.Controls.Add(this.btn_Main_Delete);
             this.Controls.Add(this.lstv_Main_ContactLst);
             this.Controls.Add(this.btn_Main_New);
-            this.Controls.Add(this.btn_Main_Open);
             this.Name = "Main_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phonebook";
@@ -123,8 +109,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Main_Open;
         private System.Windows.Forms.Button btn_Main_New;
         private System.Windows.Forms.ListView lstv_Main_ContactLst;
         private System.Windows.Forms.Button btn_Main_Delete;

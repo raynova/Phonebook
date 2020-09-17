@@ -32,21 +32,6 @@ namespace Phonebook
             comboBox_Main_Search.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
-        //button Open
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            if (comboBox_Main_Search.SelectedItem.
-            {
-                int index = 0;
-                foreach(ListViewItem item in lstv_Main_ContactLst.SelectedItems)
-                {
-                    index = item.Index;
-                }
-                var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
-                x.ShowDialog();
-            }
-        }*/
-
         private void btn_Main_New_Click(object sender, EventArgs e)
         {
             var x = new New_Edit_form(con, lstContacts, lstv_Main_ContactLst);
@@ -93,6 +78,25 @@ namespace Phonebook
                 var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
                 x.ShowDialog();
             }
+        }
+
+        private void comboBox_Main_Search_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = 0;
+            string text = comboBox_Main_Search.SelectedItem.ToString();
+            string[] a = text.Split(' ');
+            string name = a[0];
+            string lastName = a[1];
+            for(int i = 0; i < lstContacts.Count; i++)
+            {
+                if(lstContacts[i].name == name)
+                {
+                    index = i;
+                }
+            }
+
+            var x = new Info_form(lstContacts, index, con, lstv_Main_ContactLst);
+            x.ShowDialog();
         }
     }
 }
