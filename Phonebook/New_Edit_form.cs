@@ -66,7 +66,7 @@ namespace Phonebook
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_NewEdit_Save_Click(object sender, EventArgs e)
         {
             string name = "";
             string lastName = "";
@@ -123,8 +123,6 @@ WHERE id = {contact.id}";
                 lstv_Main_ContactLst.Items.Add(contact.name + " " + contact.lastName);
                 comboBox_Main_Search.Items.Add(contact.name + " " + contact.lastName);
             }
-            
-
             Close();
         }
 

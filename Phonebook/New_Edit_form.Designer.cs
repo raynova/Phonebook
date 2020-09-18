@@ -57,7 +57,7 @@
             this.btn_NewEdit_Save.TabIndex = 0;
             this.btn_NewEdit_Save.Text = "Save";
             this.btn_NewEdit_Save.UseVisualStyleBackColor = false;
-            this.btn_NewEdit_Save.Click += new System.EventHandler(this.button1_Click);
+            this.btn_NewEdit_Save.Click += new System.EventHandler(this.btn_NewEdit_Save_Click);
             // 
             // btn_NewEdit_Cancel
             // 
@@ -193,7 +193,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "New_Edit_form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New contact";
             this.ResumeLayout(false);
             this.PerformLayout();

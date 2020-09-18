@@ -22,9 +22,9 @@ FROM contacts;
 DELETE FROM contacts WHERE id = 4 OR id = 5
 
 INSERT INTO contacts(name, lastName, phone, address, email)
-VALUES ('Anna', 'Peterson', 5347357, 'Woder str, USA', 'myemail@test.com'),
-('Dmitrijs', 'Peterson', 75737753, 'Woder str, USA', 'myemail@test.com'),
-('Boris', 'Klava', 75373753, 'Woder str, USA', 'myemail@test.com'),
+VALUES ('Ieva', 'Peterson', 5367357, 'Woder str, USA', 'myemail@test.com'),
+('Matvejs', 'Peterson', 75732753, 'Woder str, USA', 'myemail@test.com'),
+('Kristine', 'Klava', 75973753, 'Woder str, USA', 'myemail@test.com'),
 ('Charlie', 'Peterson', 8769875, 'Woder str, USA', 'myemail@test.com'),
 ('Diana', 'Porty', 4543789, 'Woder str, USA', 'myemail@test.com'),
 ('Peter', 'Mederson', 45368334, 'Woder str, USA', 'myemail@test.com'),
